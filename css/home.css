@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400;700&family=Bellefair&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ----------------- */
+/* Custom Properties */
+/* ----------------- */
+:root {
+    /* ----- Colors ----- */
+    --clr-blue: rgb(11, 13, 23);
+    --clr-grey: rgb(128, 128, 128);
+    --clr-purple: rgb(208, 214, 249);
+    --clr-transparent-black: rgba(0, 0, 0, 0.7);
+    --clr-transparent-white: rgba(255, 255, 255, 0.1);
+    --clr-white: rgb(255, 255, 255);
+    
+    /* ----- Fonts ----- */
+    --ff-barlow: 'Barlow', sans-serif;
+    --ff-barlow-condensed: 'Barlow Condensed', sans-serif;
+    --ff-bellefair: 'Bellefair', serif;
+
+    /* ----- Font Sizes ----- */
+    --fs-900: clamp(4.5rem, 20vw, 5.5rem);
+    --fs-800: ;
+    --fs-700: ;
+    --fs-500: clamp(0.7rem, 3.5vw, 0.9rem);
+    --fs-400: clamp(1rem, 5vw, 2rem);
+    --fs-300: clamp(0.75rem, 4vw, 1rem);
+    --fs-200: clamp(0.7rem, 3vw, 0.79rem);
+}
+
+@media (min-width: 481px) {
+    :root {
+        --fs-900: clamp(5.5rem, 17vw, 7.25rem);
+        --fs-800: ;
+        --fs-700: ;
+        --fs-600: ;
+        --fs-500: clamp(0.75rem, 3vw, 1.25rem);
+        --fs-400: clamp(1.25rem, 3vw, 2rem);
+        --fs-300: clamp(0.5rem, 2.5vw, 1rem);
+        --fs-200: clamp(0.8rem, 2.5vw, 0.9rem);
+    }
+}
+
+@media (min-width: 769px) {
+    :root {
+        --fs-900: clamp(7.25rem, 15vw, 8.5rem);
+        --fs-800: ;
+        --fs-700: ;
+        --fs-600: ;
+        --fs-500: clamp(1.25rem, 2vw, 1.5rem);
+        --fs-400: clamp(2rem, 3vw, 2.15rem);
+        --fs-300: 1rem;
+        --fs-200: clamp(0.9rem, 2vw, 1rem);
+    }
+}
+
+/* ----------------- */
+/* Utility Classes   */
+/* ----------------- */
+
+/* ----- General ----- */
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap:var(--gap, 1rem);
+}
+
+/* ----- Colors ----- */
+.bg-blue { background-color: var(--clr-blue); }
+.bg-purple { background-color: var(--clr-purple); }
+.bg-transparent-black { background-color: var(--clr-transparent-black); }
+.bg-transparent-white { background-color: var(--clr-transparent-white); }
+.bg-white { background-color: var(--clr-white);}
+
+.text-blue { color: var(--clr-blue); }
+.text-grey { color: var(--clr-grey); }
+.text-purple { color: var(--clr-purple); }
+.text-white { color: var(--clr-white); }
+
+/* ----- Fonts ----- */
+.bold { font-weight: bold; }
+.ff-barlow { font-family: var(--ff-barlow); }
+.ff-barlow-condensed { font-family: var(--ff-barlow-condensed); }
+.ff-bellefair { font-family: var(--ff-bellefair); }
+.light { font-weight: lighter; }
+.uppercase { text-transform: uppercase; }
+
+/* ----- Letter Spacing ----- */
+.spacing-1 { letter-spacing: 4.75px; }
+.spacing-2 { letter-spacing: 2.7px; }
+.spacing-3 { letter-spacing: 2.35px; }
+
+/* ----- Font Sizes ----- */
+.fs-h1 { font-size: var(--fs-900); }
+.fs-h2 { font-size: var(); }
+.fs-h3 { font-size: var(); }
+.fs-h4 { font-size: var(); }
+.fs-h5 { font-size: var(--fs-500); }
+.fs-sh1 { font-size: var(--fs-400); }
+.fs-sh2 { font-size: var(); }
+.fs-nav { font-size: var(--fs-300); }
+.fs-body { font-size: var(--fs-200); }
+
+/* ----------------- */
+/* Home Mobile       */
+/* ----------------- */
+
+/* ----- Body ----- */
+.home {
+    background: url('/img/home/background-home-mobile.jpg') center center / cover no-repeat fixed;
+    height: 100%;
+    width: 100%;
+}
+
+/* ----- Grid Container ----- */
+.container {
+    --gap: 0;
+    grid-template-areas:
+    'header header'
+    'main main'
+    'aside aside'
+    'footer footer';
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    height: 100%;
+    margin: auto;
+    width: 100%;
+}
+
+/* ----- Header ----- */
+.container header { grid-area: header; }
+
+.logo {
+    display: block;
+    margin: 2rem 0 0 2rem;
+}
+
+.navigation {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+}
+
+@supports (backdrop-filter: blur(1rem)) {
+    .navigation {
+        backdrop-filter: blur(1rem);
+        background-color: var(--clr-transparent-white);
+    }
+}
+
+.navigation li {
+    padding: 1rem;
+    position: relative;
+}
+
+.navigation a { text-decoration: none; }
+
+nav a:hover { color: var(--clr-purple); }
+
+nav a::before {
+    background: var(--clr-purple);
+    content: '';
+    display: block;
+    height: 2px;
+    position: relative;
+    top: 1.75rem;
+    transition: all ease-in-out 250ms;
+    width: 0%;
+}
+
+nav a:hover::before { width: 60%; }
+
+.menu-toggle { display: none; }
+
+@media (max-width: 480px) {
+    .navigation {
+        inset: 0 0 0 30%;
+        padding: 8rem 1.5rem;
+        position: fixed;
+    }
+
+    .menu-toggle {
+        aspect-ratio: 1;
+        background: transparent url('/img/shared/icon-hamburger.svg') no-repeat;
+        color: transparent;
+        display: block;
+        position: absolute;
+        right: 2rem;
+        top: 2.9rem;
+        width: 2rem;
+    }
+
+    .active { display: block; }
+}
+
+/* ----- Main ----- */
+.container main {
+    align-items: center;
+    flex-direction: column;
+    grid-area: main;
+    height: 45vh;
+    justify-content: center;
+    text-align: center;
+}
+
+/* ----- Aside ----- */
+.container aside {
+    align-items: center;
+    flex-direction: column;
+    grid-area: aside;
+}
+
+button {
+    border: solid 1px var(--clr-white);
+    border-radius: 50%;
+    height: 10rem;
+    transition: background-color .4s, color .4s;
+    width: 10rem;
+}
+
+button:hover {
+    background-color: var(--clr-transparent-white);
+    color: var(--clr-white);
+}
+
+/* ----- Footer ----- */
+.container footer {
+    grid-area: footer;
+    z-index: -10;
+}
+
+.copyright {
+    bottom: 0;
+    padding-bottom: 0.3rem;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+
+@media (min-width: 481px) {
+    /* ----- Body ----- */
+    .home { background: url('/img/home/background-home-tablet.jpg') center center / cover no-repeat fixed; }
+
+    /* ----- Grid Container ----- */
+    .container {
+        grid-template-areas: 
+        'header header'
+        'main main'
+        'aside aside'
+        'footer footer';
+    }
+
+    /* ----- Header ----- */
+    .logo { margin: 2rem; }
+
+    header {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navigation {
+        display: inline-block;
+        box-shadow: 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
+        padding: clamp(1rem, 3.4vw, 1.5rem);
+    }
+
+    .navigation li {
+        display: inline-block;
+        padding: 0.5rem;
+    }
+
+    .navigation span { display: none; }
+
+    nav a::before { top: 2.5rem; }
+
+    nav a:hover::before { width: 100%; }
+
+    /* ----- Aside ----- */
+    button {
+        height: 11.5rem;
+        width: 11.5rem;
+    }
+}
+
+/* ----------------- */
+/* Home Desktop      */
+/* ----------------- */
+@media (min-width: 769px) {
+    /* ----- Body ----- */
+    .home { background: url('/img/home/background-home-desktop.jpg') center center / cover no-repeat fixed; }
+
+    /* ----- Grid Container ----- */
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        'header header'
+        'main aside'
+        'footer footer';
+    }
+
+    /* ----- Header ----- */
+    .logo { margin: 3rem; }
+
+    .navigation { 
+        padding-right: clamp(0.3rem, 10vw, 10rem); 
+        padding-left: clamp(0.3rem, 3.5vw, 4rem);
+    }
+
+    .navigation li { padding: clamp(0.3rem, 1vw, 1rem); }
+    
+    .navigation span { display: inline-block; }
+
+    /* ----- Main ----- */
+    .container main {
+        height: 80vh;
+        margin-left: 3rem;
+        width: 50vw;
+    }
+
+    /* ----- Aside ----- */
+    .container aside { justify-content: center; }
+
+    button {
+        height: 14rem;
+        width: 14rem;
+    }
+}
+
