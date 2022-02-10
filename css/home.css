@@ -114,7 +114,7 @@
 /* ----------------- */
 
 /* ----- Body ----- */
-.home {
+body {
     background: url('/img/home/background-home-mobile.jpg') center center / cover no-repeat fixed;
     height: 100%;
     width: 100%;
@@ -248,7 +248,7 @@ button:hover {
 
 @media (min-width: 481px) {
     /* ----- Body ----- */
-    .home { background: url('/img/home/background-home-tablet.jpg') center center / cover no-repeat fixed; }
+    body { background: url('/img/home/background-home-tablet.jpg') center center / cover no-repeat fixed; }
 
     /* ----- Grid Container ----- */
     .container {
@@ -296,7 +296,7 @@ button:hover {
 /* ----------------- */
 @media (min-width: 769px) {
     /* ----- Body ----- */
-    .home { background: url('/img/home/background-home-desktop.jpg') center center / cover no-repeat fixed; }
+    body { background: url('/img/home/background-home-desktop.jpg') center center / cover no-repeat fixed; }
 
     /* ----- Grid Container ----- */
     .container {
