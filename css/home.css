@@ -115,7 +115,7 @@
 
 /* ----- Body ----- */
 body {
-    background: url('/img/home/background-home-mobile.jpg') center center / cover no-repeat fixed;
+    background: url('/img/home/background-home-mobile.jpg') center center / cover no-repeat fixed !important;
     height: 100%;
     width: 100%;
 }
@@ -248,7 +248,7 @@ button:hover {
 
 @media (min-width: 481px) {
     /* ----- Body ----- */
-    body { background: url('/img/home/background-home-tablet.jpg') center center / cover no-repeat fixed; }
+    body { background: url('/img/home/background-home-tablet.jpg') center center / cover no-repeat fixed !important; }
 
     /* ----- Grid Container ----- */
     .container {
@@ -296,7 +296,7 @@ button:hover {
 /* ----------------- */
 @media (min-width: 769px) {
     /* ----- Body ----- */
-    body { background: url('/img/home/background-home-desktop.jpg') center center / cover no-repeat fixed; }
+    body { background: url('/img/home/background-home-desktop.jpg') center center / cover no-repeat fixed !important; }
 
     /* ----- Grid Container ----- */
     .container {
