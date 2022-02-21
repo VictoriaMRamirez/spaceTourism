@@ -111,6 +111,7 @@
 .fs-sh2 { font-size: var(); }
 .fs-nav { font-size: var(--fs-300); }
 .fs-body { font-size: var(--fs-200); }
+/* ------------------------------------------------ */
 
 /* ----------------- */
 /* Home Mobile       */
@@ -355,3 +356,174 @@ button:hover {
         width: 14rem;
     }
 }
+/* ------------------------------------------------ */
+
+/* ------------------ */
+/* Destination Mobile */
+/* ------------------ */
+
+/* ----- Body ----- */
+.destination {
+    background: url('../img/destination/background-destination-mobile.jpg') center center / cover no-repeat fixed !important;
+    height: 100%;
+    width: 100%;
+}
+
+/* ----- Grid Container ----- */
+.destination-container {
+    grid-template-areas:
+    'header header'
+    'pick-dest pick-dest'
+    'dest-content dest-content';
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    height: 100%;
+    margin: auto;
+    width: 100%;
+}
+
+/* ----- Header ----- */
+.destination-container header { grid-area: header; }
+
+/* ----- Main ----- */
+.destination-container .pick-dest {
+    align-items: center;
+    flex-direction: column;
+    grid-area: pick-dest;
+    justify-content: center;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* ----- Slider Nav ----- */
+.slider-nav {
+    --gap: 1.5rem;
+    margin: 1rem;
+    list-style: none;
+}
+
+.slider-nav li { margin-bottom: 1rem; }
+
+.slider-nav a { text-decoration: none; }
+
+.slider-nav a::before { top: 2rem; }
+
+.slider-nav a:hover::before { width: 100%; }
+
+/* ----- Section ----- */
+.destination-container .dest-content {
+    grid-area: dest-content;
+}
+
+/* ----- Slider ----- */
+ul.slider { position: relative; }
+
+ul.slider li {
+    background: url('../img/destination/background-destination-mobile.jpg') center center / cover no-repeat fixed;
+    opacity: 0;
+    position: absolute;
+    transition: opacity .4s;
+}
+
+ul.slider li:first-child { opacity: 1; }
+
+ul.slider li:target { opacity:1; }
+
+.slider li {
+    opacity: 0; 
+    padding: 0.5rem;
+    transition: opacity .4s;
+    width: 100vw;
+}
+
+.dest-container-images {
+    align-items: center;
+    flex-direction: column;
+}
+
+.dest-images { 
+    margin-bottom: 2rem;
+    width: 13rem; 
+}
+
+.dest-container-text {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+hr { margin: 1.5rem 2rem; }
+
+.dest-container-time { flex-direction: column; }
+
+.dest-time-space { margin: 0.5rem 0;}
+
+
+/* ------------------ */
+/* Destination Tablet */
+/* ------------------ */
+@media (min-width: 481px) {
+    /* ----- Body ----- */
+    .destination { background: url('../img/destination/background-destination-tablet.jpg') center center / cover no-repeat fixed !important; }
+
+    /* ----- Main ----- */
+    .destination-container .pick-dest { margin-top: 1rem; }
+
+    .pick-dest h1 {
+        left: 3rem;
+        letter-spacing: 4.75px;
+        position: absolute;
+    }
+
+    /* ----- Slider Nav ----- */
+    .slider-nav { margin-top: 3rem; }
+
+    .slider-nav a::before { top: 2.5rem; }
+
+    /* ----- Slider ----- */
+    ul.slider li { background: url('../img/destination/background-destination-tablet.jpg') center center / cover no-repeat fixed; }
+
+    .dest-images { width: 15.5rem; }
+
+    .dest-container-time { 
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .dest-time-space { margin: 0; }
+}
+
+/* ------------------- */
+/* Destination Desktop */
+/* ------------------- */
+@media (min-width: 769px) {
+    /* ----- Body ----- */
+    .destination { background: url('../img/destination/background-destination-desktop.jpg') center center / cover no-repeat fixed !important; }
+
+    /* ----- Slider Nav ----- */
+    .slider-nav { margin: 5rem 0 2rem; }
+
+    /* ----- Slider ----- */
+    ul.slider li { background: url('../img/destination/background-destination-desktop.jpg') center center / cover no-repeat fixed; }
+
+    .dest-images { 
+        margin: 1rem;
+        width: 21rem; 
+    }
+
+    #moon, #mars, #europa, #titan {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .dest-container-text {
+        margin-left: 4vw;
+        text-align: left;
+    }
+
+    hr { margin: 2rem 0;}
+
+    .dest-container-time { justify-content: space-between; }
+}
+/* ------------------------------------------------ */

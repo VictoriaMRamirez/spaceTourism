@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Space Tourism | Destination</title>
+
+    <link rel="icon" type="image/png" href="./img/shared/favicon.png" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js" defer></script>
+  </head>
+
+  <body class="bg-blue destination">
+    
+    <!----- Grid Container ----->
+    <div class="destination-container grid">
+
+      <!----- Header ----->
+      <header class="flex">
+        <!-- Logo -->
+        <div>
+          <img src="./img/shared/logo.svg" alt="logo" class="logo" />
+        </div>
+        <!-- Main Navigation -->
+        <nav>
+          <ul id="navigation-list" class="navigation bg-transparent-black">
+            <li>
+              <a href="index.html" class="text-white ff-barlow-condensed fs-nav spacing-2 uppercase">
+                <span class="bold">00</span> Home</a>
+            </li>
+            <li>
+              <a href="destination.html" class="text-white ff-barlow-condensed fs-nav spacing-2 uppercase">
+                <span class="bold">01</span> Destination</a>
+            </li>
+            <li>
+              <a href="crew.html" class="text-white ff-barlow-condensed fs-nav spacing-2 uppercase">
+                <span class="bold">02</span> Crew</a>
+            </li>
+            <li>
+              <a href="technology.html" class="text-white ff-barlow-condensed fs-nav spacing-2 uppercase">
+                <span class="bold">03</span> Technology</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- Button #1 -->
+        <div class="menu-toggle" id="button"></div>
+      </header>
+
+      <!----- Main ----->
+      <main class="pick-dest flex">
+          <!-- Title -->
+          <div>
+            <h1 class="text-white ff-barlow-condensed fs-h5 light spacing-2 uppercase">
+            <span class="text-grey bold">01 </span>Pick your destination</h1>
+          </div>
+          <div>
+              <!-- Slider Nav -->
+              <nav>
+                  <ul class="slider-nav flex">
+                      <li><a href="#moon" class="text-white ff-barlow-condensed fs-sh1 spacing-2 uppercase">
+                          Moon</a></li>
+                      <li><a href="#mars" class="text-white ff-barlow-condensed fs-sh1 spacing-2 uppercase">
+                          Mars</a></li>
+                      <li><a href="#europa" class="text-white ff-barlow-condensed fs-sh1 spacing-2 uppercase">
+                          Europa</a></li>
+                      <li><a href="#titan" class="text-white ff-barlow-condensed fs-sh1 spacing-2 uppercase">
+                          Titan</a></li>
+                  </ul>
+              </nav>
+          </div>
+      </main>
+
+      <!----- Section ----->
+      <section class="dest-content flex">
+          <!-- Slider -->
+          <ul class="slider">
+              <!-- Slider #1 -->
+              <li id="moon">
+                  <div class="dest-container-images flex">
+                      <img src="./img/destination/moon.png" alt="Moon Image" class="dest-images">
+                  </div>
+                  <div class="dest-container-text flex">
+                      <p class="text-white ff-bellefair fs-h2 light uppercase">Moon</p>
+                      <p class="text-purple ff-barlow fs-body height-2">
+                        See our planet as you've never seen it before. A perfect <br />
+                        relaxing trip away to help regain perspective and come<br />
+                        back refreshed. While you're there, take in some history<br />
+                        by visiting the Luna 2 and Apolo 11 landing sites.
+                      </p>
+                      <hr />
+                      <div class="dest-container-time flex">
+                          <div>
+                              <p class="text-purple ff-bellefair fs-body height-1 uppercase">Avg. distance</p>
+                              <p class="text-white ff-bellefair fs-h4 uppercase">384,400 km</p>
+                          </div>
+                          <div class="dest-time-space">
+                              <p class="text-purple ff-bellefair fs-body height-1 uppercase">Est. travel time</p>
+                              <p class="text-white ff-bellefair fs-h4 uppercase">3 days</p>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+              <!-- Slider #2 -->
+              <li id="mars">
+                <div class="dest-container-images flex">
+                    <img src="./img/destination/mars.png" alt="Mars Image" class="dest-images">
+                </div>
+                <div class="dest-container-text flex">
+                    <p class="text-white ff-bellefair fs-h2 light uppercase">Mars</p>
+                    <p class="text-purple ff-barlow fs-body height-2">
+                        Don't forget to pack your hiking boots. You'll need <br />
+                        them to tackle Olympus Mons, the tallest planetary <br />
+                        mountain in our solar system. It's two and a half <br />
+                        time the size of Everest!
+                    </p>
+                    <hr />
+                    <div class="dest-container-time flex">
+                        <div>
+                            <p class="text-purple ff-bellefair fs-body height-1 uppercase">Avg. distance</p>
+                            <p class="text-white ff-bellefair fs-h4 uppercase">225 Mil. km</p>
+                        </div>
+                        <div class="dest-time-space">
+                            <p class="text-purple ff-bellefair fs-body height-1 uppercase">Est. travel time</p>
+                            <p class="text-white ff-bellefair fs-h4 uppercase">9 months</p>
+                        </div>
+                    </div>
+                </div>
+              </li>
+              <!-- Slider #3 -->
+              <li id="europa">
+                <div class="dest-container-images flex">
+                    <img src="./img/destination/europa.png" alt="Europa Image" class="dest-images">
+                </div>
+                <div class="dest-container-text flex">
+                    <p class="text-white ff-bellefair fs-h2 light uppercase">Europa</p>
+                    <p class="text-purple ff-barlow fs-body height-2">
+                        The smallest of the four Gailean moons orbiting <br />
+                        Jupiter. Europa is a winter lover's dream. With an icy <br />
+                        surface, it's perfect for a bit of ice skating, curling, <br />
+                        hockey, or simple relaxation in your snug wintery cabin.
+                    </p>
+                    <hr />
+                    <div class="dest-container-time flex">
+                        <div>
+                            <p class="text-purple ff-bellefair fs-body height-1 uppercase">Avg. distance</p>
+                            <p class="text-white ff-bellefair fs-h4 uppercase">628 Mil. km</p>
+                        </div>
+                        <div class="dest-time-space">
+                            <p class="text-purple ff-bellefair fs-body height-1 uppercase">Est. travel time</p>
+                            <p class="text-white ff-bellefair fs-h4 uppercase">3 years</p>
+                        </div>
+                    </div>
+                </div>
+              </li>
+              <!-- Slider #4 -->
+              <li id="titan">
+                <div class="dest-container-images flex">
+                    <img src="./img/destination/titan.png" alt="Titan Image" class="dest-images">
+                </div>
+                <div class="dest-container-text flex">
+                    <p class="text-white ff-bellefair fs-h2 light uppercase">Titan</p>
+                    <p class="text-purple ff-barlow fs-body height-2">
+                        The only moon known to have a dense atmosphere <br />
+                        other than Earth. Titan is a home away from home <br />
+                        just a few hundred degrees cooler! As a bonus, <br />
+                        you get striking views of the Rings of Saturn.
+                    </p>
+                    <hr />
+                    <div class="dest-container-time flex">
+                        <div>
+                            <p class="text-purple ff-bellefair fs-body height-1 uppercase">Avg. distance</p>
+                            <p class="text-white ff-bellefair fs-h4 uppercase">1.6 Bil. km</p>
+                        </div>
+                        <div class="dest-time-space">
+                            <p class="text-purple ff-bellefair fs-body height-1 uppercase">Est. travel time</p>
+                            <p class="text-white ff-bellefair fs-h4 uppercase">7 years</p>
+                        </div>
+                    </div>
+                </div>
+              </li>
+          </ul>
+      </section>
+      
+      
+    </div>
+    
+  </body>
+</html>
