@@ -8,47 +8,54 @@
     <title>Space Tourism | Home</title>
 
     <link rel="icon" type="image/png" href="./img/shared/favicon.png" />
-    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/script.js" defer></script>
   </head>
 
-  <body class="bg-blue">
-
+  <body class="bg-blue home">
+    
+    <!----- Grid Container ----->
     <div class="container grid">
 
+      <!----- Header ----->
       <header class="flex">
+        <!-- Logo -->
         <div>
           <img src="./img/shared/logo.svg" alt="logo" class="logo" />
         </div>
+        <!-- Main Navigation -->
         <nav>
           <ul id="navigation-list" class="navigation bg-transparent-black">
             <li>
-              <a href="#" class="text-white ff-barlow-condensed fs-nav spacing-2 uppercase">
+              <a href="index.html" class="text-white ff-barlow-condensed fs-nav spacing-2 uppercase">
                 <span class="bold">00</span> Home</a>
             </li>
             <li>
-              <a href="#" class="text-white ff-barlow-condensed fs-nav spacing-2 uppercase">
+              <a href="destination.html" class="text-white ff-barlow-condensed fs-nav spacing-2 uppercase">
                 <span class="bold">01</span> Destination</a>
             </li>
             <li>
-              <a href="#" class="text-white ff-barlow-condensed fs-nav spacing-2 uppercase">
+              <a href="crew.html" class="text-white ff-barlow-condensed fs-nav spacing-2 uppercase">
                 <span class="bold">02</span> Crew</a>
             </li>
             <li>
-              <a href="#" class="text-white ff-barlow-condensed fs-nav spacing-2 uppercase">
+              <a href="technology.html" class="text-white ff-barlow-condensed fs-nav spacing-2 uppercase">
                 <span class="bold">03</span> Technology</a>
             </li>
           </ul>
         </nav>
+        <!-- Button #1 -->
         <div class="menu-toggle" id="button"></div>
       </header>
       
-      <main class="flex">
+      <!----- Main ----->
+      <main class="home-content flex">
+        <!-- Text Content -->
         <p class="text-purple ff-barlow-condensed fs-h5 spacing-1 uppercase">
           So, you want to travel to</p>
         <h1 class="text-white ff-bellefair fs-h1 light uppercase">
           Space</h1>
-        <p class="text-purple ff-barlow fs-body">
+        <p class="text-purple ff-barlow fs-body height-2">
           Let's face it; if you want to go to space, you might<br />
           as well genuinely go to outer space and not hover<br />
           kind of on the edge of it. Well sit back, and relax<br />
@@ -57,16 +64,11 @@
         </p>
       </main>
       
-      <aside class="flex">
-        <a href="#"><button class="bg-white text-blue ff-bellefair fs-sh1 spacing-3 uppercase">Explore</button></a>
+      <!----- Aside ----->
+      <aside class="explore flex">
+        <!-- Button #2 -->
+        <a href="destination.html"><button class="bg-white text-blue ff-bellefair fs-sh1 spacing-3 uppercase">Explore</button></a>
       </aside>
-  
-      <footer>
-        <div class="copyright">
-          <p class="text-white ff-barlow-condensed fs-body light spacing-3 uppercase">&copy;2022 Victoria Ramírez - All rights reserved</p>
-        </div>
-      </footer>
-
     </div>
     
   </body>
