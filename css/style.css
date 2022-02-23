@@ -25,7 +25,7 @@
     /* ----- Font Sizes ----- */
     --fs-900: clamp(4.75rem, 20vw, 5.5rem);
     --fs-800: clamp(2.25rem, 10vw, 3rem);
-    --fs-700: ;
+    --fs-700: clamp(1.35rem, 7vw, 1.75rem);
     --fs-600: clamp(1.15rem, 5vw, 1.35rem);
     --fs-500: clamp(0.8rem, 3.5vw, 0.9rem);
     --fs-400: clamp(1rem, 5vw, 1.25rem);
@@ -37,7 +37,7 @@
     :root {
         --fs-900: clamp(5.5rem, 17vw, 7.25rem);
         --fs-800: clamp(3rem, 7vw, 3.75rem);
-        --fs-700: ;
+        --fs-700: clamp(1.75rem, 5vw, 2.15rem);
         --fs-600: clamp(1.35rem, 4.5vw, 1.5rem);
         --fs-500: clamp(0.75rem, 3vw, 1.25rem);
         --fs-400: clamp(1.25rem, 3vw, 1.45rem);
@@ -50,7 +50,7 @@
     :root {
         --fs-900: clamp(7.25rem, 15vw, 8.5rem);
         --fs-800: clamp(3.75rem, 10vw, 4.5rem);
-        --fs-700: ;
+        --fs-700: clamp(2.15rem, 5vw, 2.5rem);
         --fs-600: clamp(1.5rem, 3vw, 1.75rem);
         --fs-500: clamp(1.25rem, 2vw, 1.5rem);
         --fs-400: 1.5rem;
@@ -104,11 +104,11 @@
 /* ----- Font Sizes ----- */
 .fs-h1 { font-size: var(--fs-900); }
 .fs-h2 { font-size: var(--fs-800); }
-.fs-h3 { font-size: var(); }
+.fs-h3 { font-size: var(--fs-700); }
 .fs-h4 { font-size: var(--fs-600); }
 .fs-h5 { font-size: var(--fs-500); }
 .fs-sh1 { font-size: var(--fs-400); }
-.fs-sh2 { font-size: var(); }
+.fs-sh2 { font-size: var(--fs-300); }
 .fs-nav { font-size: var(--fs-300); }
 .fs-body { font-size: var(--fs-200); }
 /* ------------------------------------------------ */
@@ -411,9 +411,7 @@ button:hover {
 .slider-nav a:hover::before { width: 100%; }
 
 /* ----- Section ----- */
-.destination-container .dest-content {
-    grid-area: dest-content;
-}
+.destination-container .dest-content { grid-area: dest-content; }
 
 /* ----- Slider ----- */
 ul.slider { position: relative; }
@@ -527,3 +525,311 @@ hr { margin: 1.5rem 2rem; }
     .dest-container-time { justify-content: space-between; }
 }
 /* ------------------------------------------------ */
+
+/* ------------------ */
+/* Crew Mobile        */
+/* ------------------ */
+
+/* ----- Body ----- */
+.crew {
+    background: url('../img/crew/background-crew-mobile.jpg') center center / cover no-repeat fixed !important;
+    height: 100%;
+    width: 100%;
+}
+
+/* ----- Grid Container ----- */
+.crew-container {
+    grid-template-areas:
+    'header header'
+    'meet-crew meet-crew'
+    'crew-content crew-content';
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    height: 100%;
+    margin: auto;
+    width: 100%;
+}
+
+/* ----- Header ----- */
+.crew-container header { grid-area: header; }
+
+/* ----- Main ----- */
+.crew-container .meet-crew {
+    align-items: center;
+    flex-direction: column;
+    grid-area: meet-crew;
+    justify-content: center;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* ----- Slider Nav ----- */
+.slider-nav {
+    --gap: 1.5rem;
+    margin: 1rem;
+    list-style: none;
+}
+
+.slider-nav li { margin-bottom: 1rem; }
+
+.slider-nav a { text-decoration: none; }
+
+.slider-nav a::before { top: 2rem; }
+
+.slider-nav a:hover::before { width: 100%; }
+
+/* ----- Section ----- */
+.crew-container .crew-content { grid-area: crew-content; }
+
+/* ----- Slider ----- */
+ul.slider-crew { position: relative; }
+
+ul.slider-crew li {
+    background: url('../img/crew/background-crew-mobile.jpg') center center / cover no-repeat fixed;
+    opacity: 0;
+    position: absolute;
+    transition: opacity .4s;
+}
+
+ul.slider-crew li:first-child { opacity: 1; }
+
+ul.slider-crew li:target { opacity:1; }
+
+.slider-crew li {
+    height: 70vh;
+    opacity: 0; 
+    padding: 0.5rem;
+    transition: opacity .4s;
+    width: 100vw;
+}
+
+.crew-container-images {
+    align-items: center;
+    flex-direction: column;
+}
+
+.crew-images { width: 12rem; }
+
+.crew-container-text {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.crew-container-text hr { margin: 0 2rem 1.5rem; }
+
+.crew-container-text p { margin: 0.25rem; }
+
+/* ------------------ */
+/* Crew Tablet        */
+/* ------------------ */
+@media (min-width: 481px) {
+    /* ----- Body ----- */
+    .crew { background: url('../img/crew/background-crew-tablet.jpg') center center / cover no-repeat fixed !important; }
+
+    /* ----- Main ----- */
+    .crew-container .meet-crew { margin-top: 1rem; }
+
+    .meet-crew h1 {
+        left: 3rem;
+        letter-spacing: 4.75px;
+        position: absolute;
+    }
+
+    /* ----- Slider Nav ----- */
+    .slider-nav {
+        letter-spacing: 2.7px;
+        margin-top: 3rem;
+    }
+
+    .slider-nav a::before { top: 2.5rem; }
+
+    /* ----- Slider ----- */
+    ul.slider-crew li { background: url('../img/crew/background-crew-tablet.jpg') center center / cover no-repeat fixed; }
+
+    .crew-images { width: 14rem; }
+}
+
+/* ------------------ */
+/* Crew Desktop       */
+/* ------------------ */
+@media (min-width: 769px) {
+    /* ----- Body ----- */
+    .crew { background: url('../img/crew/background-crew-desktop.jpg') center center / cover no-repeat fixed !important; }
+
+    /* ----- Slider Nav ----- */
+    .slider-nav { 
+        letter-spacing: 2.7px;
+        margin: 5rem 0 2rem; 
+    }
+
+    /* ----- Slider ----- */
+    ul.slider-crew li { background: url('../img/crew/background-crew-desktop.jpg') center center / cover no-repeat fixed; }
+
+    .slider-crew li { height: 60vh; }
+
+    .crew-images { 
+        border-bottom: var(--clr-white) 2px solid;
+        width: 17rem; 
+    }
+
+    #commander, #specialist, #pilot, #engineer {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .crew-container-text {
+        margin-left: 4vw;
+        text-align: left;
+    }
+
+    .crew-container-text hr { margin: 0.5rem 0; }
+}
+/* ------------------------------------------------ */
+
+/* ------------------ */
+/* Technology Mobile  */
+/* ------------------ */
+
+/* ----- Body ----- */
+.technology {
+    background: url('../img/technology/background-technology-mobile.jpg') center center / cover no-repeat fixed !important;
+    height: 100%;
+    width: 100%;
+}
+
+/* ----- Grid Container ----- */
+.technology-container {
+    grid-template-areas:
+    'header header'
+    'tech-terminology tech-terminology'
+    'tech-content tech-content';
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    height: 100%;
+    margin: auto;
+    width: 100%;
+}
+
+/* ----- Header ----- */
+.technology-container header { grid-area: header; }
+
+/* ----- Main ----- */
+.technology-container .tech-terminology {
+    align-items: center;
+    flex-direction: column;
+    grid-area: tech-terminology;
+    justify-content: center;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* ----- Section ----- */
+.technology-container .tech-content { grid-area: tech-content; }
+
+/* ----- Slider ----- */
+ul.slider-tech { position: relative; }
+
+ul.slider-tech li {
+    background: url('../img/technology/background-technology-mobile.jpg') center center / cover no-repeat fixed;
+    opacity: 0;
+    position: absolute;
+    transition: opacity .4s;
+}
+
+ul.slider-tech li:first-child { opacity: 1; }
+
+ul.slider-tech li:target { opacity:1; }
+
+.slider-tech li {
+    opacity: 0; 
+    padding: 0.5rem;
+    transition: opacity .4s;
+    width: 100vw;
+}
+
+.tech-container-images {
+    align-items: center;
+    flex-direction: column;
+}
+
+.tech-images { 
+    border: var(--clr-white) solid 1px;
+    margin: 1rem 0 3rem;
+    width: 100vw; 
+}
+
+.tech-images-2 { display: none; }
+
+.tech-container-text {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.tech-container-text p { margin: 0.25rem; }
+
+/* ------------------ */
+/* Technology Tablet  */
+/* ------------------ */
+@media (min-width: 481px) {
+    /* ----- Body ----- */
+    .technology { background: url('../img/technology/background-technology-tablet.jpg') center center / cover no-repeat fixed !important; }
+
+    /* ----- Main ----- */
+    .technology-container .tech-terminology { margin-top: 1rem; }
+
+    .tech-terminology h1 {
+        left: 3rem;
+        letter-spacing: 4.75px;
+        position: absolute;
+    }
+
+    /* ----- Slider Nav ----- */
+    .slider-nav { margin-top: 3rem; }
+
+    .slider-nav a::before { top: 2.5rem; }
+
+    /* ----- Slider ----- */
+    ul.slider-tech li { background: url('../img/technology/background-technology-tablet.jpg') center center / cover no-repeat fixed; }
+
+    .tech-images-2 { display: none; }
+}
+
+/* ------------------ */
+/* Technology Desktop */
+/* ------------------ */
+@media (min-width: 769px) {
+    /* ----- Body ----- */
+    .technology { background: url('../img/technology/background-technology-desktop.jpg') center center / cover no-repeat fixed !important; }
+
+    /* ----- Slider Nav ----- */
+    .slider-nav { margin: 5rem 0 2rem; }
+
+    /* ----- Slider ----- */
+    ul.slider-tech li { background: url('../img/technology/background-technology-desktop.jpg') center center / cover no-repeat fixed; }
+
+    .slider-tech li { height: 50vh; }
+
+    .tech-images { display: none; }
+
+    .tech-images-2 {
+        border: var(--clr-white) 1px solid;
+        display: block;
+        width: 20rem;
+    }
+
+    #vehicle, #spaceport, #capsule {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .tech-container-text {
+        margin-left: 4vw;
+        text-align: left;
+    }
+}
