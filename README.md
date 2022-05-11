@@ -2,9 +2,9 @@
 Multipage webpage using frontend tools.
 
 ## List of used tools:
-• HTML5.
-• CSS3 (pseudo classes, grid, flex, media queries).
-• JavaScript.
+- HTML5.
+- CSS3 (pseudo classes, grid, flex, media queries).
+- JavaScript.
 
 ### ESPAÑOL
 
@@ -12,6 +12,6 @@ Multipage webpage using frontend tools.
 Sitio web multipágina usando herramientas de frontend.
 
 ## Lista de herramientas utilizadas:
-• HTML5.
-• CSS3 (pseudo clases, grid, flex, media queries).
-• JavaScript.
+- HTML5.
+- CSS3 (pseudo clases, grid, flex, media queries).
+- JavaScript.
