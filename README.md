@@ -1,10 +1,11 @@
 # Space Tourism
-Multipage webpage using frontend tools.
+Multipage website using frontend tools.
 
 ## List of used tools:
 - HTML5.
 - CSS3 (pseudo classes, grid, flex, media queries).
 - JavaScript.
+- Google Fonts.
 
 ### ESPAÑOL
 
@@ -15,3 +16,4 @@ Sitio web multipágina usando herramientas de frontend.
 - HTML5.
 - CSS3 (pseudo clases, grid, flex, media queries).
 - JavaScript.
+- Google Fonts.
